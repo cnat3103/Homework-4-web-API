@@ -16,7 +16,7 @@ function printHighScore() {
       //create new list element
       let list = document.createElement("li"); 
       // create text node (text content) within list element
-      let entry = document.createTextNode(highscores[i].initials + ": " + highscores[i].score); 
+      let entry = document.createTextNode(highscores[i].nickname + ": " + highscores[i].score); 
       list.appendChild(entry);
       rankings.appendChild(list);
     }
