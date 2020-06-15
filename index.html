@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz Challenge</title>
+</head>
+<body>
+    <nav> 
+        <!-- will hold in the upper left a link to the highscores
+            to the upper right a countdown timer for the quiz-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mr-auto">
+                        <a class="nav-item nav-link active" href="highscores.html">View highscores</a>
+                    </div>
+                </div>
+                
+                <!-- timer countdown -->
+                <div class="countdownBox">
+                    <p>Time Left: <span id="counterDisplay"></span></p>
+                </div>
+            </div>
+        </nav> 
+    </nav>
+    
+    <div class="wrapper">
+        
+        <div id="quizBox" class="hoverBox">
+        
+            <!-- boxOne is the instructions box. Hides when the Start Quiz button pushed -->
+            <div id="boxOne">
+                <h3>Coding Quiz Challenge</h3>
+                <p>Try to answer the following code related questions</p>
+                <p>You have 90 seconds. Keep an eye on the timer. You will be penalised 15 seconds for incorrect answers</p>      
+                <p>Be quick and best of luck!</p>
+                <!-- A <button id="startButton" > to start the quiz -->
+                <button id="startQuiz">Start Quiz</button>
+            </div>
+            
+            <!-- boxTwo starts hidden and prints the questions to the screen once User responds to each-->
+            <div id="boxTwo" class="startHidden"> 
+                <h3 id="title"></h3>
+                <button id ="A" class="quizBtn"></button>
+                <button id ="B" class="quizBtn"></button>
+                <button id ="C" class="quizBtn"></button>
+                <button id="D" class="quizBtn"></button>
+                <p id="checkAns"></p>
+            </div>
+            
+            <div id="boxThree" class="startHidden">
+                <h3>You LOSE!</h3>
+                <!-- revert to the instructions again on timer reaching 0 -->
+                <a href="index.html" class="button px-2 py-1">Go Back</a>
+            </div>
+
+            <!-- boxFour renders if successfully navigates through each Q in the time provided -->   
+            <div id="boxFour" class="startHidden">
+                <h3 id="endMsg"></h3>
+                <h4 id="userScore"></h4>
+                <p>High Score:</p>
+                <form>
+                    <input type="text" id="userName">
+                    <!--button to submit-->
+                    <a href="highscores.html" id="submitScore" class="button px-2 py-1">Submit</a>
+                </form>
+            </div>
+
+        </div>
+            
+    </div>
+
+    
+    
+    
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
