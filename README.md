@@ -2,7 +2,7 @@
 Homework task 4
 Created a Coding Quiz Challenge.
 
-* Requires 5 primary elements:
+* Requires 6 primary elements:
     - primary HTML page that contains
         - nav bar with link to Highscores page and timer
         - boxOne - displays instructions and contains "Start Quiz" button to which event listener will be added to trigger quiz;
@@ -16,5 +16,8 @@ Created a Coding Quiz Challenge.
     - Primary JS doc that sets value of variables, includes our event listeners, sets interval for timer and stores items in local storage
     - Questions JS that defines the questions to be rendered and identifies correct reponses
     - highScores JS that retrieves information from local storage, displays and sorts the highscores
+    - CSS stylesheet that provides:
+        - styling for elements across both HTML documents
+        - padding and spacing of elements
 
 * Please refer to extensive commentary in relevant pages
